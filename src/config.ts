@@ -21,10 +21,12 @@ export function getEnvVariable<T extends any = string>(variable: string): T {
 
 export type Config = {
   tokenSecret: string,
-  apiKey: string
+  apiKey: string,
+  cookieSecret: string
 }
 
 export const config: Readonly<Config> = {
     tokenSecret: getEnvVariable('TOKEN_SECRET'),
-    apiKey: getEnvVariable('API_KEY')
+    apiKey: getEnvVariable('API_KEY'),
+    cookieSecret: getEnvVariable('COOKIE_SECRET')
 }
