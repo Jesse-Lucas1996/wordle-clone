@@ -3,10 +3,9 @@ import { asyncHandler } from "../../api/middleware";
 import { createCookieAuthMiddleware } from "../../api/middleware";
 import homeRouter from './home'
 import createUser from '../../website/routes/createUser'
-import { config } from "../../config";
 
 const router = Router()
-const cookieAuth = createCookieAuthMiddleware(config.cookieSecret)
+const cookieAuth = createCookieAuthMiddleware('admin')
 router.use('/', asyncHandler(homeRouter))
 router.use('/auth', asyncHandler(createUser))
 router.use(cookieAuth)
