@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { asyncHandler, authenticateToken } from "../../api/middleware";
+import { asyncHandler } from "../../api/middleware";
 import { createCookieAuthMiddleware } from "../../api/middleware";
 import homeRouter from './home'
 import createUser from '../../website/routes/createUser'

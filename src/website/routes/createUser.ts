@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import { config } from '../../config';
 
 const router = Router();
-router.use(cookieParser('token'))
+router.use(cookieParser('user'))
 
 function generateAccessToken(username: any) {
     return jwt.sign(username, config.tokenSecret, { expiresIn: '1800s' });
@@ -15,7 +15,7 @@ const token = generateAccessToken({username: req.body});
 if (typeof window !== 'undefined') {
   window.sessionStorage.setItem('token', token)
 }
-res.cookie('token', token, {
+res.cookie('user', token, {
   signed: true,
   httpOnly: true,
   expires: new Date(new Date().setHours(new Date().getHours() + 1))
