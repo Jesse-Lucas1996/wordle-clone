@@ -1,7 +1,45 @@
 html
-    head
-        title= "Eggie"
-    body
-        h1= "Welcome to the Eggie App"
-        h2= "Rendered with pug"
-        p #{word}
+    title= "Worlde Clone"
+    link(href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css')
+style 
+    include style.css 
+script(type="module" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js") 
+script
+    include ./scripts/board.js
+
+body
+    h1(class="h1") Wordle
+    div(id="game-board")
+    div(id="keyboard")
+        div(class="first-row")
+            button(class="keyboard-button") q
+            button(class="keyboard-button") w 
+            button(class="keyboard-button") e 
+            button(class="keyboard-button") r 
+            button(class="keyboard-button") t 
+            button(class="keyboard-button") y 
+            button(class="keyboard-button") u 
+            button(class="keyboard-button") i 
+            button(class="keyboard-button") o 
+            button(class="keyboard-button") p
+        div(class="second-row")
+            button(class="keyboard-button") a
+            button(class="keyboard-button") s
+            button(class="keyboard-button") d
+            button(class="keyboard-button") f
+            button(class="keyboard-button") g
+            button(class="keyboard-button") h 
+            button(class="keyboard-button") j
+            button(class="keyboard-button") k
+            button(class="keyboard-button") l
+        div(class="third-row")
+            button(class="keyboard-button") del
+            button(class="keyboard-button") z
+            button(class="keyboard-button") x
+            button(class="keyboard-button") c
+            button(class="keyboard-button") v
+            button(class="keyboard-button") b
+            button(class="keyboard-button") n
+            button(class="keyboard-button") m
+            button(class="keyboard-button") enter
+
