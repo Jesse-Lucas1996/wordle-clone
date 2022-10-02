@@ -1,9 +1,14 @@
 html
     title= "Worlde Clone"
+head
     link(href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript" rel="stylesheet")
 style 
     include style.css 
-script(type="module" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js") 
+script(type="module") 
+script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type='application/javascript')
 script
     include ./scripts/board.js
 
