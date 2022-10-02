@@ -26,6 +26,8 @@ app.use(
 const realPath = path.join(__dirname, "./website/images");
 
 app.use("/images", express.static(realPath));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join("src/website/views/scripts/board.js")));
 
 app.use(cookieParser("SECRET_CHANGE_IT"));
 

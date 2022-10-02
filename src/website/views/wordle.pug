@@ -1,53 +1,15 @@
 html(lang="en")
     title= "Worlde Clone"
-head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    link(rel="stylesheet" href="style.css")
-    link(href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css')
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 style 
     include style.css 
-script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type='application/javascript')
 script(type="module")
     include ./scripts/board.js
 
 body
-    h1(class="h1") Wordle Clone
-    div(id="game-board")
-    div(id="keyboard-cont")
-        div(class="first-row")
-            button(class="keyboard-button") q
-            button(class="keyboard-button") w 
-            button(class="keyboard-button") e 
-            button(class="keyboard-button") r 
-            button(class="keyboard-button") t 
-            button(class="keyboard-button") y 
-            button(class="keyboard-button") u 
-            button(class="keyboard-button") i 
-            button(class="keyboard-button") o 
-            button(class="keyboard-button") p
-        div(class="second-row")
-            button(class="keyboard-button") a
-            button(class="keyboard-button") s
-            button(class="keyboard-button") d
-            button(class="keyboard-button") f
-            button(class="keyboard-button") g
-            button(class="keyboard-button") h 
-            button(class="keyboard-button") j
-            button(class="keyboard-button") k
-            button(class="keyboard-button") l
-        div(class="third-row")
-            button(class="keyboard-button") Del
-            button(class="keyboard-button") z
-            button(class="keyboard-button") x
-            button(class="keyboard-button") c
-            button(class="keyboard-button") v
-            button(class="keyboard-button") b
-            button(class="keyboard-button") n
-            button(class="keyboard-button") m
-            button(class="keyboard-button") Enter
+    div(class= 'title') Wordle
+    div(class= 'game')
+        div(id= 'game')
+    </div>
+    div(id = 'answer')
+    div(id = 'used') Incorrect Letters
 
