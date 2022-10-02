@@ -5870,7 +5870,7 @@ function checkGuess () {
 
       if (guessesRemaining === 0) {
           toastr.error("You've run out of guesses! Game over!")
-          toastr.info(`The right word was: "${rightGuessString}"`)
+          toastr.info(`The right word was: "${rightGuessString}"`).show()
       }
   }
 }
