@@ -3,7 +3,7 @@ import { WORDS } from "../utils/words";
 const router = express.Router({});
 
 router.get("/", async (_req, res) => {
-  const word = WORDS[0];
+  const word = WORDS[Math.floor(Math.random() * WORDS.length)];
   res.render("wordle.pug", { word });
 });
 
