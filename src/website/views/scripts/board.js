@@ -5913,7 +5913,7 @@ new Promise((resolve, reject) => {
 document.addEventListener("keyup", (e) => {
 
   if (guessesRemaining === 0) {
-      alert("No More Guesses refresh to try again")
+      location.reload()
       return
   }
 
